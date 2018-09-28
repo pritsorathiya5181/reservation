@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment">
+
+    <LinearLayout
+        android:id="@+id/layoutdesc"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/unselect"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvadult"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1 Adult "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tvchild"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="| 1 Adult "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tvinf"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="| 1 Adult"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/showFlight"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutdesc"
+        tools:context=".payment">
+
+        <TextView
+            android:id="@+id/tvsetsource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="DEL"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/image1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/tvsetsource"
+            android:padding="4dp"
+            android:src="@drawable/plane"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvsetsource"
+            app:layout_constraintRight_toLeftOf="@+id/tvsetDest"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="53dp" />
+
+        <TextView
+            android:id="@+id/tvsetDest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/image1"
+            android:text="BOM"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/image1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/h1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        app:layout_constraintBottom_toTopOf="@+id/flightdesc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showFlight" />
+
+    <RelativeLayout
+        android:id="@+id/flightdesc"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/h1">
+
+        <ImageView
+            android:id="@+id/setimage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/plane" />
+
+        <TextView
+            android:id="@+id/setPlanename"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/setimage"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="73dp"
+            android:text="UK-981"
+            android:textColor="@color/unselect"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/setSfullname"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="-172dp"
+            android:layout_marginTop="52dp"
+            android:layout_toStartOf="@+id/setimage"
+            android:text="New Delhi"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/setSname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="87dp"
+            android:text="DEL"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/setStime"
+            android:layout_width="175dp"
+            android:layout_height="29dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="9dp"
+            android:text="25-12-2012"
+            android:textSize="20dp"
+            tools:ignore="DuplicateIds" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/unselect" />
+
+        <ImageView
+            android:id="@+id/timeimage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="108dp"
+            android:src="@drawable/time" />
+
+        <TextView
+            android:id="@+id/setDura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="14dp"
+            android:text="2h 22min"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/setDfullname"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/setDura"
+            android:layout_alignTop="@+id/setSfullname"
+            android:text="New Delhi"
+            android:textAlignment="textEnd"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/setDname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/setSname"
+            android:layout_marginEnd="23dp"
+            android:text="BOM"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/setDtime"
+            android:layout_width="175dp"
+            android:layout_height="29dp"
+            android:layout_alignEnd="@+id/setDura"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:text="25-12-2012"
+            android:textAlignment="textEnd"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/h2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        app:layout_constraintBottom_toTopOf="@id/fare"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flightdesc" />
+
+    <TextView
+        android:id="@+id/fare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Fare Breakup"
+        android:textColor="@color/lightBlue"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/h2"
+        app:layout_constraintBottom_toTopOf="@+id/h3"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <View
+        android:id="@+id/h3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#c0c0c0"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fare" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/basefare"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="7dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fare">
+
+        <TextView
+            android:id="@+id/base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base Fare"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/baseP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 55000"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintLeft_toRightOf="@+id/base"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/h4"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@+id/basefare"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/basefare">
+
+        <TextView
+            android:id="@+id/oChanges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other Changes"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/otherP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 550"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@+id/oChanges"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.529" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/h5"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@+id/other"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bookingcharge"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other">
+
+        <TextView
+            android:id="@+id/bookCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IRCTC booking charges"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/irctcP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 50"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintLeft_toRightOf="@+id/bookCharge"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.529" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/h6"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@+id/bookingcharge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/applygst"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookingcharge">
+
+        <TextView
+            android:id="@+id/gst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GST(%18)"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/gstP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 55000"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintLeft_toRightOf="@+id/gst"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.529" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/h7"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@+id/applygst"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/TotalCharge"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:padding="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applygst">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/totalP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 55000"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintLeft_toRightOf="@+id/total"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/h8"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@+id/TotalCharge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <Button
+        android:id="@+id/continueb"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Continue Booking"
+        android:textSize="18dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/roundedbutton"/>
+
+</android.support.constraint.ConstraintLayout>

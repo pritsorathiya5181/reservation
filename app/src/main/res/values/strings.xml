@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">reservation</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="class_promt">Choose a Class</string>
+
+    <string-array name="clss_arrays">
+        <item>Economy</item>
+        <item>Business</item>
+        <item>Premium Economy</item>
+    </string-array>
+</resources>
